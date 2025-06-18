@@ -43,13 +43,33 @@ body {
   align-items: end;
 }
 
-.circle {
+.circle-1 {
   background-color: rgba(94, 214, 186, 255);
   width: 10px;
   height: 10px;
   border-radius: 100%;
   border-style: solid;
   border-color: rgba(204, 249, 245, 255);
+  margin: 5px;
+}
+
+.circle-2 {
+  background-color: rgb(255, 0, 0);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: rgb(255, 152, 147);
+  margin: 5px;
+}
+
+.circle-3 {
+  background-color: rgb(255, 196, 0);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: rgb(255, 239, 179);
   margin: 5px;
 }
 
@@ -62,9 +82,9 @@ body {
 }
 
 .shoes {
-  margin-bottom: -50px;
+  margin-bottom: -35px;
   width: 180px;
-  height: 250px;
+  height: 210px;
   object-fit: cover;
   margin-left: 20px;
 }
@@ -78,11 +98,106 @@ body {
 }
 
 .card-body {
-  background-color: red;
-  height: 250px;
+  height: 285px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.product-title {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: rgb(74, 74, 74);
+  font-weight: bold;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.description-product {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(172, 172, 172);
+  margin: 0;
+  margin-top: 25px;
+}
+
+.price-product {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+.price-product-color-sky {
+  color: rgb(86, 196, 174);
+}
+
+.price-product-color-red {
+  color: rgb(255, 0, 0);
+}
+
+.price-product-color-yellow {
+  color: rgb(255, 196, 0);
+}
+
+.ranking i:nth-child(-n + 3) {
+  color: gold;
+}
+
+.ranking i {
+  color: rgb(198, 198, 198);
 }
 
 .card-footer {
-  background-color: black;
-  height: 100px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.button-add-to-cart {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.button-blue-sky {
+  background-color: rgb(0, 207, 167);
+  transition: background-color 0.3s ease;
+}
+
+.button-red {
+  background-color: rgb(255, 0, 0);
+}
+
+.button-yellow {
+  background-color: rgb(255, 196, 0);
+}
+
+.button-blue-sky:hover {
+  background-color: rgb(92, 215, 197);
+}
+
+.card:has(.button-blue-sky:hover) .price-product-color-sky {
+  color: rgb(92, 215, 197);
+}
+
+.button-red:hover {
+  background-color: rgb(255, 152, 147);
+}
+
+.card:has(.button-red:hover) .price-product-color-red {
+  color: rgb(255, 152, 147);
+}
+
+.button-yellow:hover {
+  background-color: rgb(255, 239, 179);
+}
+
+.card:has(.button-yellow:hover) .price-product-color-yellow {
+  color: rgb(255, 239, 179);
 }
